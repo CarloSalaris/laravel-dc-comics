@@ -4,7 +4,7 @@
     <div class="container text-center">
         <h2>NEW COMIC BOOK</h2>
 
-        <form method="POST">
+        <form method="POST" action="{{ route('comics.store') }}">
 
             @csrf
 
@@ -37,6 +37,19 @@
             <br>
             <input type="text" name="price">
             <br>
+
+            {{-- SALE DATE --}}
+            <label for="sale_date">Sale date</label>
+            <br>
+            <input type="text" name="sale_date">
+            <br>
+
+            {{-- TYPE --}}
+            <label for="type">Type</label>
+            <br>
+            <input type="text" name="type">
+            <br>
+
 
             <input class="my-3" type="submit" value="CREATE">
 
