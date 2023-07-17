@@ -26,7 +26,7 @@
 
                 <div class="row justify-content-around">
                     <div class="col">
-                        <b>Serie: </b>
+                        <b>Series: </b>
                         {{ $comic->series }}
                     </div>
                     <div class="col">

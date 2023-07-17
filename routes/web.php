@@ -18,5 +18,10 @@ use App\Http\Controllers\MainController;
 Route :: get("/", [MainController :: class, "index"])
     -> name("comics.index");
 
+Route :: get("/comics/create", [MainController :: class, "create"])
+    -> name("comics.create");
+
 Route :: get("/comics/{id}", [MainController :: class, "show"])
     -> name("comics.show");
+
+

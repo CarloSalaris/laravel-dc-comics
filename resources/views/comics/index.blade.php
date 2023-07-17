@@ -13,5 +13,8 @@
                 </li>
             @endforeach
         </ul>
+
+        <a class="btn btn-primary mb-3" href="{{ route('comics.create') }}" role="button">Create a new one</a>
+
     </div>
 @endsection
