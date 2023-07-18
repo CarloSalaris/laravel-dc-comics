@@ -9,8 +9,8 @@
 
             <div class="card-body">
 
-                <div class="mb-3">
-                    <img src=" {{ $comic->thumb }} " alt="comic cover">
+                <div class="mb-3 text-center d-flex justify-content-center">
+                    <div class="img_container"><img src=" {{ $comic->thumb }} " alt="comic cover"></div>
                 </div>
 
 
@@ -22,7 +22,7 @@
 
             </div>
 
-            <div class="card-footer">
+            <div class="card-footer py-3">
 
                 <div class="row justify-content-around">
                     <div class="col">
@@ -32,6 +32,10 @@
                     <div class="col">
                         <b>Price: </b>
                         {{ $comic->price }}
+                    </div>
+                    <div class="col">
+                        <b>Type: </b>
+                        {{ $comic->type }}
                     </div>
                 </div>
 

@@ -54,5 +54,8 @@
             <input class="my-3" type="submit" value="CREATE">
 
         </form>
+
+        <a class="btn btn-primary" href="{{ route('comics.index') }}" role="button">BACK</a>
+
     </div>
 @endsection
