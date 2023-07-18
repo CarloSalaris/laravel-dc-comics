@@ -2,7 +2,12 @@
 
 @section('content')
     <div class="container text-center">
-        <h1 class="mb-3">List of comics</h1>
+        <div class="d-flex justify-content-center align-items-center">
+            <h1 class="d-inline m-3">List of comics</h1>
+            <a class="btn btn-light border" href="{{ route('comics.create') }}" role="button">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+        </div>
 
         <ul class="list-unstyled">
             @foreach ($comics as $comic)
@@ -63,7 +68,7 @@
             @endforeach
         </ul>
 
-        <a class="btn btn-primary mb-3" href="{{ route('comics.create') }}" role="button">Create a new one</a>
+        <a class="btn btn-primary my-3" href="{{ route('comics.create') }}" role="button">Create a new one</a>
 
     </div>
 @endsection
