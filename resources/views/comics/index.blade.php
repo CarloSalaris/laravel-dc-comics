@@ -25,11 +25,38 @@
                         <a class="m-4 btn btn-primary m-3 px-4" href="{{ route('comics.edit', $comic->id) }}"
                             role="button">EDIT</a>
 
-                        <form class="d-inline" action="{{ route('comics.destroy', $comic->id) }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <input class="btn btn-warning m-3 px-4" type="submit" value="DELETE">
-                        </form>
+                        <button type="button" class="btn btn-warning m-3 px-4" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            DELETE
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">DELETE COMIC BOOK</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete this comic book?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">CLOSE</button>
+                                        <form class="d-inline" action="{{ route('comics.destroy', $comic->id) }}"
+                                            method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input class="btn btn-warning m-3 px-4" type="submit" value="DELETE">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                 </li>
