@@ -43,7 +43,8 @@
 
         </div>
 
-        <a class="mt-4 btn btn-primary" href="{{ route('comics.index') }}" role="button">back to the list</a>
+        <a class="m-4 btn btn-primary m-3 px-4" href="{{ route('comics.edit', $comic->id) }}" role="button">EDIT</a>
+        <a class="m-4 btn btn-secondary m-3 px-4" href="{{ route('comics.index') }}" role="button">BACK TO LIST</a>
 
     </div>
 @endsection
