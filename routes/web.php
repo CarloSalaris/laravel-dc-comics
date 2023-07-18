@@ -27,4 +27,7 @@ Route :: post("/comics", [MainController :: class, "store"])
 Route :: get("/comics/{id}", [MainController :: class, "show"])
     -> name("comics.show");
 
+Route :: get("/comics/edit/{id}", [MainController :: class, "edit"])
+    ->name("comics.edit");
+
 

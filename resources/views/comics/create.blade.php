@@ -11,51 +11,50 @@
             {{-- TITOLO --}}
             <label for="title">Title</label>
             <br>
-            <input type="text" name="title">
+            <input class="mb-3 mt-2 col-md-6 text-center" type="text" name="title">
             <br>
 
             {{-- IMG --}}
             <label for="thumb">Image source</label>
             <br>
-            <input type="text" name="thumb">
+            <input class="mb-3 mt-2 col-md-6 text-center" type="text" name="thumb">
             <br>
 
             {{-- DESCRIPTION --}}
             <label for="description">Description</label>
             <br>
-            <input type="text" name="description">
+            <input class="mb-3 mt-2 col-md-6 text-center" type="text" name="description">
             <br>
 
             {{-- SERIE --}}
             <label for="series">Series</label>
             <br>
-            <input type="text" name="series">
+            <input class="mb-3 mt-2 col-md-6 text-center" type="text" name="series">
             <br>
 
             {{-- PRICE --}}
             <label for="price">Price</label>
             <br>
-            <input type="text" name="price">
+            <input class="mb-3 mt-2 col-md-6 text-center" type="text" name="price">
             <br>
 
             {{-- SALE DATE --}}
             <label for="sale_date">Sale date</label>
             <br>
-            <input type="date" name="sale_date">
+            <input class="mb-3 mt-2 col-md-6 text-center" type="date" name="sale_date">
             <br>
 
             {{-- TYPE --}}
             <label for="type">Type</label>
             <br>
-            <input type="text" name="type">
+            <input class="mb-3 mt-2 col-md-6 text-center" type="text" name="type">
             <br>
 
 
-            <input class="my-3" type="submit" value="CREATE">
+            <input class="btn btn-primary m-3 px-4" type="submit" value="CREATE">
 
+            <a class="btn btn-secondary m-3 px-4" href="{{ route('comics.index') }}" role="button">BACK</a>
         </form>
-
-        <a class="btn btn-primary" href="{{ route('comics.index') }}" role="button">BACK</a>
 
     </div>
 @endsection

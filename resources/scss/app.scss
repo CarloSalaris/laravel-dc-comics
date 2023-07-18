@@ -1,5 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
 
+
+
+img {
+    max-width: 100%;
+}
+
 .img_container {
     width: 350px;
     height: 500px;
@@ -12,6 +18,8 @@
     }
 }
 
-img {
-    max-width: 100%;
+.sm_img_container {
+    img {
+        max-width: 200px;
+    }
 }
