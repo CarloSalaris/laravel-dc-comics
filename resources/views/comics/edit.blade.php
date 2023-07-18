@@ -29,7 +29,7 @@
             {{-- DESCRIPTION --}}
             <label for="description">Description</label>
             <br>
-            <input class="mb-3 mt-2 col-12 col-md-8 col-xl-6" type="text" name="description"
+            <input class="mb-3 mt-2 col-12 col-md-8 col-xl-6 text-center" type="text" name="description"
                 value="{{ $comic->description }}">
             <br>
 
@@ -65,6 +65,7 @@
             <div>
                 <input class="btn btn-primary m-3 px-4" type="submit" value="UPDATE">
                 <a class="btn btn-secondary m-3 px-4" href="{{ route('comics.index') }}" role="button">BACK TO LIST</a>
+
             </div>
 
         </form>

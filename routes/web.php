@@ -28,8 +28,11 @@ Route :: get("/comics/{id}", [MainController :: class, "show"])
     -> name("comics.show");
 
 Route :: get("/edit/{id}", [MainController :: class, "edit"])
-    ->name("comics.edit");
+    -> name("comics.edit");
 
 Route :: put("/update/{id}", [MainController :: class, "update"])
-    ->name('comics.update');
+    -> name('comics.update');
+
+Route :: delete("/destroy/{id}", [MainController :: class, "destroy"])
+    -> name('comics.destroy');
 
