@@ -41,7 +41,7 @@
             {{-- SALE DATE --}}
             <label for="sale_date">Sale date</label>
             <br>
-            <input type="text" name="sale_date">
+            <input type="date" name="sale_date">
             <br>
 
             {{-- TYPE --}}

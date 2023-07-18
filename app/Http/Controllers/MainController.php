@@ -24,16 +24,7 @@ class MainController extends Controller
 
         $data = $request -> all();
 
-        $comic = Comic :: create([
-
-            "title" => $data["title"],
-            "description" => $data["description"],
-            "thumb" => $data["thumb"],
-            "price" => $data["price"],
-            "series" => $data["series"],
-            "sale_date" => $data["sale_date"],
-            "type" => $data["type"]
-        ]);
+        $comic = Comic :: create($data);
 
         return redirect() -> route("comics.show", $comic -> id);
     }
