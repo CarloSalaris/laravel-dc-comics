@@ -38,8 +38,7 @@
                             <input class="btn btn-warning m-3 px-4" type="submit" value="DELETE">
                         </form>
 
-
-
+                        <!-- Modal trigger -->
                         <button type="button" class="btn btn-warning m-3 px-4" data-bs-toggle="modal"
                             data-bs-target="#deleteModal">
                             DELETE (Modal)
