@@ -23,6 +23,7 @@ class MainController extends Controller
     public function store(Request $request) {
 
         $data = $request -> validate(
+
             $this -> getValidationRule()
         );
 
@@ -47,7 +48,10 @@ class MainController extends Controller
 
     public function update(Request $request, $id) {
 
-        $data = $request -> all();
+        $data = $request -> validate(
+
+            $this -> getValidationRule()
+        );
 
         $comic = Comic :: findOrFail($id);
 
