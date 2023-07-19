@@ -33,6 +33,6 @@ Route :: get("/edit/{id}", [MainController :: class, "edit"])
 Route :: put("/update/{id}", [MainController :: class, "update"])
     -> name('comics.update');
 
-Route :: delete("/destroy/{id}", [MainController :: class, "destroy"])
-    -> name('comics.destroy');
+Route :: delete("/delete/{id}", [MainController :: class, "delete"])
+    -> name('comics.delete');
 

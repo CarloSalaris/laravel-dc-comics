@@ -54,7 +54,7 @@ class MainController extends Controller
         return redirect() -> route('comics.show', $comic -> id);
     }
 
-    public function destroy($id) {
+    public function delete($id) {
         $comic = Comic :: findOrFail($id);
 
         $comic -> delete();

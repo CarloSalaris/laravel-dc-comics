@@ -29,8 +29,8 @@
             {{-- DESCRIPTION --}}
             <label for="description">Description</label>
             <br>
-            <input class="mb-3 mt-2 col-12 col-md-8 col-xl-6 text-center" type="text" name="description"
-                value="{{ $comic->description }}">
+            <textarea class="mb-3 mt-2 col-12 col-md-8 col-xl-6 text-center" type="text" name="description"> {{ $comic->description }}
+            </textarea>
             <br>
 
             {{-- SERIE --}}
