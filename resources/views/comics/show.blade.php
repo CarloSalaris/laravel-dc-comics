@@ -1,5 +1,9 @@
 @extends('layouts.main-layout')
 
+@section('title')
+    DETAILS
+@endsection
+
 @section('content')
     <div class="container text-center">
         <div class="card">

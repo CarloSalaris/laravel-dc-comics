@@ -16,7 +16,10 @@
     <!-- Styles -->
     @vite('resources/js/app.js')
 
-    <title>DC Comics</title>
+    <title>
+        DC Comics:
+        @yield('title')
+    </title>
 
 </head>
 
