@@ -73,7 +73,7 @@ class MainController extends Controller
         return [
             "title" => 'required|min:3|max:255',
             "description" => 'required|min:5|string',
-            "thumb" => 'required|min:3|max:255',
+            "thumb" => 'required|min:3',
             "price" => 'required|min:5|max:15',
             "series" => 'required|min:1|max:128',
             "sale_date" => 'required|date',
