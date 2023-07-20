@@ -24,7 +24,8 @@ class MainController extends Controller
 
         $data = $request -> validate(
 
-            $this -> getValidationRule()
+            $this -> getValidationRule(),
+            $this -> getValidationMessages()
         );
 
         $comic = Comic :: create($data);
@@ -50,7 +51,8 @@ class MainController extends Controller
 
         $data = $request -> validate(
 
-            $this -> getValidationRule()
+            $this -> getValidationRule(),
+            $this -> getValidationMessages()
         );
 
         $comic = Comic :: findOrFail($id);
@@ -72,12 +74,26 @@ class MainController extends Controller
 
         return [
             "title" => 'required|min:3|max:255',
-            "description" => 'required|min:5|string',
-            "thumb" => 'required|min:3',
-            "price" => 'required|min:5|max:15',
+            "description" => 'nullable|max:65536',
+            "thumb" => 'nullable|max:65536',
+            "price" => 'required|starts_with:$',
             "series" => 'required|min:1|max:128',
             "sale_date" => 'required|date',
             "type" => 'required|min:1|max:128'
+        ];
+    }
+
+    private function getValidationMessages() {
+
+        return [
+            "title.required" => "Il titolo è necessario",
+            "title.min" => "Il titolo non può essere più breve di 3 caratteri",
+            "title.max" => "Il titolo non può essere più lungo di 3 caratteri",
+            "price.required" => "il prezzo è necessario",
+            "price.starts_with" => "il prezzo dev'essere preceduto dal simbolo $",
+            "series.required" => "la serie è necessaria",
+            "sale_date.required" => "la data di aquisto è necessaria",
+            "type.required" => "il tipo è necessario"
         ];
     }
 }
